@@ -147,13 +147,13 @@ create_Gestion_des_etablissement (void)
   GtkWidget *image35;
   GtkWidget *label134;
   GtkWidget *regioncombobox;
-  GtkWidget *_67radiobutton;
-  GSList *_67radiobutton_group = NULL;
-  GtkWidget *_77radiobutton;
   GtkWidget *_57radiobutton;
+  GSList *_57radiobutton_group = NULL;
+  GtkWidget *_67radiobutton;
+  GtkWidget *_77radiobutton;
   GtkWidget *ajouterlabel;
   GtkWidget *fixed7;
-  GtkWidget *gereretabtreeview;
+  GtkWidget *treeview1;
   GtkWidget *etsrechnom;
   GtkWidget *label18;
   GtkWidget *rechbutton;
@@ -179,6 +179,9 @@ create_Gestion_des_etablissement (void)
   GtkWidget *label156;
   GtkWidget *entrymadrr;
   GtkWidget *label157;
+  GtkWidget *radiobuttonm67;
+  GSList *radiobuttonm67_group = NULL;
+  GtkWidget *radiobuttonm77;
   GtkWidget *checkbuttommsf;
   GtkWidget *checkbuttonmautres;
   GtkWidget *modifbutton;
@@ -188,24 +191,38 @@ create_Gestion_des_etablissement (void)
   GtkWidget *label129;
   GtkWidget *labelrechregion;
   GtkWidget *labelnomrech;
+  GtkWidget *combomregion;
+  GList *combomregion_items = NULL;
+  GtkWidget *combo_entry8;
+  GtkWidget *rechregioncombo;
+  GList *rechregioncombo_items = NULL;
+  GtkWidget *combo_entry12;
   GtkWidget *checkbuttonnom_reg;
   GtkWidget *checkbuttonreg_nom;
-  GtkWidget *checkbuttonmcr;
-  GtkWidget *mregioncombobox;
-  GtkWidget *rechregioncombobox;
+  GtkWidget *mregcombo;
+  GList *mregcombo_items = NULL;
+  GtkWidget *entry33;
   GtkWidget *radiobuttonm57;
-  GSList *radiobuttonm57_group = NULL;
-  GtkWidget *radiobuttonm67;
-  GtkWidget *radiobuttonm77;
+  GtkWidget *checkbuttonmcr;
   GtkWidget *gererlabel;
   GtkWidget *fixed9;
   GtkWidget *label67;
   GtkWidget *label68;
+  GtkWidget *scrolledwindow2;
+  GtkWidget *ctree3;
+  GtkWidget *label75;
+  GtkWidget *label76;
+  GtkWidget *label77;
+  GtkWidget *scrolledwindow3;
+  GtkWidget *ctree2;
+  GtkWidget *label70;
+  GtkWidget *label71;
+  GtkWidget *label72;
   GtkWidget *label73;
+  GtkWidget *combostatreg;
+  GList *combostatreg_items = NULL;
+  GtkWidget *combo_entry2;
   GtkWidget *label69;
-  GtkWidget *comboboxstatreg;
-  GtkWidget *statregtreeview;
-  GtkWidget *treeviewstatcap;
   GtkWidget *statlabel;
 
   Gestion_des_etablissement = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -341,26 +358,26 @@ create_Gestion_des_etablissement (void)
   gtk_combo_box_append_text (GTK_COMBO_BOX (regioncombobox), _("sousse "));
   gtk_combo_box_append_text (GTK_COMBO_BOX (regioncombobox), _("sfax"));
 
+  _57radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("5/7"));
+  gtk_widget_show (_57radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed5), _57radiobutton, 184, 248);
+  gtk_widget_set_size_request (_57radiobutton, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_57radiobutton), _57radiobutton_group);
+  _57radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_57radiobutton));
+
   _67radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("6/7"));
   gtk_widget_show (_67radiobutton);
   gtk_fixed_put (GTK_FIXED (fixed5), _67radiobutton, 312, 248);
   gtk_widget_set_size_request (_67radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_67radiobutton), _67radiobutton_group);
-  _67radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_67radiobutton));
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_67radiobutton), _57radiobutton_group);
+  _57radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_67radiobutton));
 
   _77radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("7/7"));
   gtk_widget_show (_77radiobutton);
   gtk_fixed_put (GTK_FIXED (fixed5), _77radiobutton, 448, 248);
   gtk_widget_set_size_request (_77radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_77radiobutton), _67radiobutton_group);
-  _67radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_77radiobutton));
-
-  _57radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("5/7"));
-  gtk_widget_show (_57radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed5), _57radiobutton, 184, 248);
-  gtk_widget_set_size_request (_57radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_57radiobutton), _67radiobutton_group);
-  _67radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_57radiobutton));
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (_77radiobutton), _57radiobutton_group);
+  _57radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (_77radiobutton));
 
   ajouterlabel = gtk_label_new (_("Ajouter"));
   gtk_widget_show (ajouterlabel);
@@ -370,10 +387,10 @@ create_Gestion_des_etablissement (void)
   gtk_widget_show (fixed7);
   gtk_container_add (GTK_CONTAINER (notebook1), fixed7);
 
-  gereretabtreeview = gtk_tree_view_new ();
-  gtk_widget_show (gereretabtreeview);
-  gtk_fixed_put (GTK_FIXED (fixed7), gereretabtreeview, 24, 32);
-  gtk_widget_set_size_request (gereretabtreeview, 544, 384);
+  treeview1 = gtk_tree_view_new ();
+  gtk_widget_show (treeview1);
+  gtk_fixed_put (GTK_FIXED (fixed7), treeview1, 24, 32);
+  gtk_widget_set_size_request (treeview1, 544, 384);
 
   etsrechnom = gtk_entry_new ();
   gtk_widget_show (etsrechnom);
@@ -492,6 +509,20 @@ create_Gestion_des_etablissement (void)
   gtk_fixed_put (GTK_FIXED (fixed7), label157, 720, 368);
   gtk_widget_set_size_request (label157, 120, 24);
 
+  radiobuttonm67 = gtk_radio_button_new_with_mnemonic (NULL, _("6/7"));
+  gtk_widget_show (radiobuttonm67);
+  gtk_fixed_put (GTK_FIXED (fixed7), radiobuttonm67, 896, 232);
+  gtk_widget_set_size_request (radiobuttonm67, 64, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm67), radiobuttonm67_group);
+  radiobuttonm67_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm67));
+
+  radiobuttonm77 = gtk_radio_button_new_with_mnemonic (NULL, _("7/7"));
+  gtk_widget_show (radiobuttonm77);
+  gtk_fixed_put (GTK_FIXED (fixed7), radiobuttonm77, 952, 232);
+  gtk_widget_set_size_request (radiobuttonm77, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm77), radiobuttonm67_group);
+  radiobuttonm67_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm77));
+
   checkbuttommsf = gtk_check_button_new_with_mnemonic (_("MSF"));
   gtk_widget_show (checkbuttommsf);
   gtk_fixed_put (GTK_FIXED (fixed7), checkbuttommsf, 984, 368);
@@ -533,6 +564,40 @@ create_Gestion_des_etablissement (void)
   gtk_fixed_put (GTK_FIXED (fixed7), labelnomrech, 16, 520);
   gtk_widget_set_size_request (labelnomrech, 120, 32);
 
+  combomregion = gtk_combo_new ();
+  g_object_set_data (G_OBJECT (GTK_COMBO (combomregion)->popwin),
+                     "GladeParentKey", combomregion);
+  gtk_widget_show (combomregion);
+  gtk_fixed_put (GTK_FIXED (fixed7), combomregion, 840, 120);
+  gtk_widget_set_size_request (combomregion, 187, 27);
+  gtk_combo_set_use_arrows_always (GTK_COMBO (combomregion), TRUE);
+  combomregion_items = g_list_append (combomregion_items, (gpointer) _("Tunis"));
+  combomregion_items = g_list_append (combomregion_items, (gpointer) _("Sousse"));
+  combomregion_items = g_list_append (combomregion_items, (gpointer) _("Sfax"));
+  gtk_combo_set_popdown_strings (GTK_COMBO (combomregion), combomregion_items);
+  g_list_free (combomregion_items);
+
+  combo_entry8 = GTK_COMBO (combomregion)->entry;
+  gtk_widget_show (combo_entry8);
+  gtk_entry_set_invisible_char (GTK_ENTRY (combo_entry8), 8226);
+
+  rechregioncombo = gtk_combo_new ();
+  g_object_set_data (G_OBJECT (GTK_COMBO (rechregioncombo)->popwin),
+                     "GladeParentKey", rechregioncombo);
+  gtk_widget_show (rechregioncombo);
+  gtk_fixed_put (GTK_FIXED (fixed7), rechregioncombo, 104, 568);
+  gtk_widget_set_size_request (rechregioncombo, 187, 27);
+  gtk_combo_set_use_arrows_always (GTK_COMBO (rechregioncombo), TRUE);
+  rechregioncombo_items = g_list_append (rechregioncombo_items, (gpointer) _("Tunis"));
+  rechregioncombo_items = g_list_append (rechregioncombo_items, (gpointer) _("Sousse"));
+  rechregioncombo_items = g_list_append (rechregioncombo_items, (gpointer) _("Sfax"));
+  gtk_combo_set_popdown_strings (GTK_COMBO (rechregioncombo), rechregioncombo_items);
+  g_list_free (rechregioncombo_items);
+
+  combo_entry12 = GTK_COMBO (rechregioncombo)->entry;
+  gtk_widget_show (combo_entry12);
+  gtk_entry_set_invisible_char (GTK_ENTRY (combo_entry12), 8226);
+
   checkbuttonnom_reg = gtk_check_button_new_with_mnemonic (_("Nom"));
   gtk_widget_show (checkbuttonnom_reg);
   gtk_fixed_put (GTK_FIXED (fixed7), checkbuttonnom_reg, 312, 512);
@@ -544,47 +609,34 @@ create_Gestion_des_etablissement (void)
   gtk_fixed_put (GTK_FIXED (fixed7), checkbuttonreg_nom, 312, 552);
   gtk_widget_set_size_request (checkbuttonreg_nom, 126, 24);
 
-  checkbuttonmcr = gtk_check_button_new_with_mnemonic (_("croissant-rouge"));
-  gtk_widget_show (checkbuttonmcr);
-  gtk_fixed_put (GTK_FIXED (fixed7), checkbuttonmcr, 840, 368);
-  gtk_widget_set_size_request (checkbuttonmcr, 144, 24);
+  mregcombo = gtk_combo_new ();
+  g_object_set_data (G_OBJECT (GTK_COMBO (mregcombo)->popwin),
+                     "GladeParentKey", mregcombo);
+  gtk_widget_show (mregcombo);
+  gtk_fixed_put (GTK_FIXED (fixed7), mregcombo, 840, 120);
+  gtk_widget_set_size_request (mregcombo, 187, 27);
+  gtk_combo_set_use_arrows_always (GTK_COMBO (mregcombo), TRUE);
+  mregcombo_items = g_list_append (mregcombo_items, (gpointer) _("Tunis"));
+  mregcombo_items = g_list_append (mregcombo_items, (gpointer) _("Sousse"));
+  mregcombo_items = g_list_append (mregcombo_items, (gpointer) _("Sfax"));
+  gtk_combo_set_popdown_strings (GTK_COMBO (mregcombo), mregcombo_items);
+  g_list_free (mregcombo_items);
 
-  mregioncombobox = gtk_combo_box_new_text ();
-  gtk_widget_show (mregioncombobox);
-  gtk_fixed_put (GTK_FIXED (fixed7), mregioncombobox, 840, 128);
-  gtk_widget_set_size_request (mregioncombobox, 33, 31);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (mregioncombobox), _("tunis"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (mregioncombobox), _("sousse"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (mregioncombobox), _("sfax"));
-
-  rechregioncombobox = gtk_combo_box_new_text ();
-  gtk_widget_show (rechregioncombobox);
-  gtk_fixed_put (GTK_FIXED (fixed7), rechregioncombobox, 112, 568);
-  gtk_widget_set_size_request (rechregioncombobox, 33, 31);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (rechregioncombobox), _("tunis"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (rechregioncombobox), _("sousse"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (rechregioncombobox), _("sfax"));
+  entry33 = GTK_COMBO (mregcombo)->entry;
+  gtk_widget_show (entry33);
+  gtk_entry_set_invisible_char (GTK_ENTRY (entry33), 8226);
 
   radiobuttonm57 = gtk_radio_button_new_with_mnemonic (NULL, _("5/7"));
   gtk_widget_show (radiobuttonm57);
   gtk_fixed_put (GTK_FIXED (fixed7), radiobuttonm57, 840, 232);
   gtk_widget_set_size_request (radiobuttonm57, 64, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm57), radiobuttonm57_group);
-  radiobuttonm57_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm57));
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm57), radiobuttonm67_group);
+  radiobuttonm67_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm57));
 
-  radiobuttonm67 = gtk_radio_button_new_with_mnemonic (NULL, _("6/7"));
-  gtk_widget_show (radiobuttonm67);
-  gtk_fixed_put (GTK_FIXED (fixed7), radiobuttonm67, 896, 232);
-  gtk_widget_set_size_request (radiobuttonm67, 64, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm67), radiobuttonm57_group);
-  radiobuttonm57_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm67));
-
-  radiobuttonm77 = gtk_radio_button_new_with_mnemonic (NULL, _("7/7"));
-  gtk_widget_show (radiobuttonm77);
-  gtk_fixed_put (GTK_FIXED (fixed7), radiobuttonm77, 952, 232);
-  gtk_widget_set_size_request (radiobuttonm77, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobuttonm77), radiobuttonm57_group);
-  radiobuttonm57_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobuttonm77));
+  checkbuttonmcr = gtk_check_button_new_with_mnemonic (_("croissant-rouge"));
+  gtk_widget_show (checkbuttonmcr);
+  gtk_fixed_put (GTK_FIXED (fixed7), checkbuttonmcr, 840, 368);
+  gtk_widget_set_size_request (checkbuttonmcr, 144, 24);
 
   gererlabel = gtk_label_new (_("Gerer"));
   gtk_widget_show (gererlabel);
@@ -604,33 +656,84 @@ create_Gestion_des_etablissement (void)
   gtk_fixed_put (GTK_FIXED (fixed9), label68, 544, 128);
   gtk_widget_set_size_request (label68, 49, 17);
 
+  scrolledwindow2 = gtk_scrolled_window_new (NULL, NULL);
+  gtk_widget_show (scrolledwindow2);
+  gtk_fixed_put (GTK_FIXED (fixed9), scrolledwindow2, 496, 320);
+  gtk_widget_set_size_request (scrolledwindow2, 328, 144);
+
+  ctree3 = gtk_ctree_new (3, 0);
+  gtk_widget_show (ctree3);
+  gtk_container_add (GTK_CONTAINER (scrolledwindow2), ctree3);
+  gtk_widget_set_size_request (ctree3, 200, 100);
+  gtk_clist_set_column_width (GTK_CLIST (ctree3), 0, 80);
+  gtk_clist_set_column_width (GTK_CLIST (ctree3), 1, 80);
+  gtk_clist_set_column_width (GTK_CLIST (ctree3), 2, 80);
+  gtk_clist_column_titles_show (GTK_CLIST (ctree3));
+
+  label75 = gtk_label_new (_("label75"));
+  gtk_widget_show (label75);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree3), 0, label75);
+
+  label76 = gtk_label_new (_("label76"));
+  gtk_widget_show (label76);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree3), 1, label76);
+
+  label77 = gtk_label_new (_("label77"));
+  gtk_widget_show (label77);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree3), 2, label77);
+
+  scrolledwindow3 = gtk_scrolled_window_new (NULL, NULL);
+  gtk_widget_show (scrolledwindow3);
+  gtk_fixed_put (GTK_FIXED (fixed9), scrolledwindow3, 712, 120);
+  gtk_widget_set_size_request (scrolledwindow3, 320, 144);
+
+  ctree2 = gtk_ctree_new (3, 0);
+  gtk_widget_show (ctree2);
+  gtk_container_add (GTK_CONTAINER (scrolledwindow3), ctree2);
+  gtk_widget_set_size_request (ctree2, 200, 100);
+  gtk_clist_set_column_width (GTK_CLIST (ctree2), 0, 80);
+  gtk_clist_set_column_width (GTK_CLIST (ctree2), 1, 80);
+  gtk_clist_set_column_width (GTK_CLIST (ctree2), 2, 80);
+  gtk_clist_column_titles_show (GTK_CLIST (ctree2));
+
+  label70 = gtk_label_new (_("label70"));
+  gtk_widget_show (label70);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree2), 0, label70);
+
+  label71 = gtk_label_new (_("label71"));
+  gtk_widget_show (label71);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree2), 1, label71);
+
+  label72 = gtk_label_new (_("label72"));
+  gtk_widget_show (label72);
+  gtk_clist_set_column_widget (GTK_CLIST (ctree2), 2, label72);
+
   label73 = gtk_label_new (_("la liste des etablissement tri\303\251s par leurs capacit\303\251s :"));
   gtk_widget_show (label73);
   gtk_fixed_put (GTK_FIXED (fixed9), label73, 72, 296);
   gtk_widget_set_size_request (label73, 384, 160);
 
+  combostatreg = gtk_combo_new ();
+  g_object_set_data (G_OBJECT (GTK_COMBO (combostatreg)->popwin),
+                     "GladeParentKey", combostatreg);
+  gtk_widget_show (combostatreg);
+  gtk_fixed_put (GTK_FIXED (fixed9), combostatreg, 336, 120);
+  gtk_widget_set_size_request (combostatreg, 187, 27);
+  gtk_combo_set_use_arrows_always (GTK_COMBO (combostatreg), TRUE);
+  combostatreg_items = g_list_append (combostatreg_items, (gpointer) _("Tunis"));
+  combostatreg_items = g_list_append (combostatreg_items, (gpointer) _("Sousse"));
+  combostatreg_items = g_list_append (combostatreg_items, (gpointer) _("Sfax"));
+  gtk_combo_set_popdown_strings (GTK_COMBO (combostatreg), combostatreg_items);
+  g_list_free (combostatreg_items);
+
+  combo_entry2 = GTK_COMBO (combostatreg)->entry;
+  gtk_widget_show (combo_entry2);
+  gtk_entry_set_invisible_char (GTK_ENTRY (combo_entry2), 8226);
+
   label69 = gtk_label_new (_("label69"));
   gtk_widget_show (label69);
   gtk_fixed_put (GTK_FIXED (fixed9), label69, 600, 128);
   gtk_widget_set_size_request (label69, 49, 17);
-
-  comboboxstatreg = gtk_combo_box_new_text ();
-  gtk_widget_show (comboboxstatreg);
-  gtk_fixed_put (GTK_FIXED (fixed9), comboboxstatreg, 352, 128);
-  gtk_widget_set_size_request (comboboxstatreg, 33, 31);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxstatreg), _("tunis "));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxstatreg), _("sousse"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (comboboxstatreg), _("sfax"));
-
-  statregtreeview = gtk_tree_view_new ();
-  gtk_widget_show (statregtreeview);
-  gtk_fixed_put (GTK_FIXED (fixed9), statregtreeview, 696, 96);
-  gtk_widget_set_size_request (statregtreeview, 300, 200);
-
-  treeviewstatcap = gtk_tree_view_new ();
-  gtk_widget_show (treeviewstatcap);
-  gtk_fixed_put (GTK_FIXED (fixed9), treeviewstatcap, 488, 360);
-  gtk_widget_set_size_request (treeviewstatcap, 300, 200);
 
   statlabel = gtk_label_new (_("Statistique"));
   gtk_widget_show (statlabel);
@@ -639,17 +742,14 @@ create_Gestion_des_etablissement (void)
   g_signal_connect ((gpointer) ajoutbutton, "clicked",
                     G_CALLBACK (on_ajoutbutton_clicked),
                     NULL);
+  g_signal_connect ((gpointer) _57radiobutton, "toggled",
+                    G_CALLBACK (on_57radiobutton_toggled),
+                    NULL);
   g_signal_connect ((gpointer) _67radiobutton, "toggled",
                     G_CALLBACK (on_67radiobutton_toggled),
                     NULL);
   g_signal_connect ((gpointer) _77radiobutton, "toggled",
                     G_CALLBACK (on_77radiobutton_toggled),
-                    NULL);
-  g_signal_connect ((gpointer) _57radiobutton, "toggled",
-                    G_CALLBACK (on_57radiobutton_toggled),
-                    NULL);
-  g_signal_connect ((gpointer) gereretabtreeview, "row_activated",
-                    G_CALLBACK (on_gereretabtreeview_row_activated),
                     NULL);
   g_signal_connect ((gpointer) rechbutton, "clicked",
                     G_CALLBACK (on_rechbutton_clicked),
@@ -659,12 +759,6 @@ create_Gestion_des_etablissement (void)
                     NULL);
   g_signal_connect ((gpointer) modifbutton, "clicked",
                     G_CALLBACK (on_modifbutton_clicked),
-                    NULL);
-  g_signal_connect ((gpointer) radiobuttonm67, "toggled",
-                    G_CALLBACK (on_radiobuttonm67_toggled),
-                    NULL);
-  g_signal_connect ((gpointer) radiobuttonm77, "toggled",
-                    G_CALLBACK (on_radiobuttonm77_toggled),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -694,12 +788,12 @@ create_Gestion_des_etablissement (void)
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, image35, "image35");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label134, "label134");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, regioncombobox, "regioncombobox");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, _57radiobutton, "_57radiobutton");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, _67radiobutton, "_67radiobutton");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, _77radiobutton, "_77radiobutton");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, _57radiobutton, "_57radiobutton");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, ajouterlabel, "ajouterlabel");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, fixed7, "fixed7");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, gereretabtreeview, "gereretabtreeview");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, treeview1, "treeview1");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, etsrechnom, "etsrechnom");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label18, "label18");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, rechbutton, "rechbutton");
@@ -724,6 +818,8 @@ create_Gestion_des_etablissement (void)
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label156, "label156");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, entrymadrr, "entrymadrr");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label157, "label157");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, radiobuttonm67, "radiobuttonm67");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, radiobuttonm77, "radiobuttonm77");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttommsf, "checkbuttommsf");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttonmautres, "checkbuttonmautres");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, modifbutton, "modifbutton");
@@ -733,23 +829,34 @@ create_Gestion_des_etablissement (void)
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label129, "label129");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, labelrechregion, "labelrechregion");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, labelnomrech, "labelnomrech");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, combomregion, "combomregion");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, combo_entry8, "combo_entry8");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, rechregioncombo, "rechregioncombo");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, combo_entry12, "combo_entry12");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttonnom_reg, "checkbuttonnom_reg");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttonreg_nom, "checkbuttonreg_nom");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttonmcr, "checkbuttonmcr");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, mregioncombobox, "mregioncombobox");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, rechregioncombobox, "rechregioncombobox");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, mregcombo, "mregcombo");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, entry33, "entry33");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, radiobuttonm57, "radiobuttonm57");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, radiobuttonm67, "radiobuttonm67");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, radiobuttonm77, "radiobuttonm77");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, checkbuttonmcr, "checkbuttonmcr");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, gererlabel, "gererlabel");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, fixed9, "fixed9");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label67, "label67");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label68, "label68");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, scrolledwindow2, "scrolledwindow2");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, ctree3, "ctree3");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label75, "label75");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label76, "label76");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label77, "label77");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, scrolledwindow3, "scrolledwindow3");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, ctree2, "ctree2");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label70, "label70");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label71, "label71");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label72, "label72");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label73, "label73");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, combostatreg, "combostatreg");
+  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, combo_entry2, "combo_entry2");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, label69, "label69");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, comboboxstatreg, "comboboxstatreg");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, statregtreeview, "statregtreeview");
-  GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, treeviewstatcap, "treeviewstatcap");
   GLADE_HOOKUP_OBJECT (Gestion_des_etablissement, statlabel, "statlabel");
 
   return Gestion_des_etablissement;
@@ -2131,7 +2238,7 @@ create_Gestion_des_dons (void)
   GtkWidget *label187;
   GtkWidget *radiobuttonm_;
   GSList *radiobuttonm__group = NULL;
-  GtkWidget *radiobuttonm_;
+  //GtkWidget *radiobuttonm_;
   GtkObject *spinbutton5_adj;
   GtkWidget *spinbutton5;
   GtkObject *spinbutton6_adj;

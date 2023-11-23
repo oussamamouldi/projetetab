@@ -407,47 +407,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkRadioButton" id="67radiobutton">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">6/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	    </widget>
-	    <packing>
-	      <property name="x">312</property>
-	      <property name="y">248</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="77radiobutton">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">7/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">67radiobutton</property>
-	    </widget>
-	    <packing>
-	      <property name="x">448</property>
-	      <property name="y">248</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkLabel" id="nomlabel">
 	      <property name="width_request">41</property>
 	      <property name="height_request">16</property>
@@ -631,89 +590,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkCombo" id="regioncombo">
-	      <property name="width_request">187</property>
-	      <property name="height_request">27</property>
-	      <property name="visible">True</property>
-	      <property name="value_in_list">False</property>
-	      <property name="allow_empty">True</property>
-	      <property name="case_sensitive">False</property>
-	      <property name="enable_arrow_keys">True</property>
-	      <property name="enable_arrows_always">True</property>
-
-	      <child internal-child="entry">
-		<widget class="GtkEntry" id="combo-entry_region">
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="editable">True</property>
-		  <property name="visibility">True</property>
-		  <property name="max_length">0</property>
-		  <property name="text" translatable="yes"></property>
-		  <property name="has_frame">True</property>
-		  <property name="invisible_char">•</property>
-		  <property name="activates_default">False</property>
-		</widget>
-	      </child>
-
-	      <child internal-child="list">
-		<widget class="GtkList" id="combo-list4">
-		  <property name="visible">True</property>
-		  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem16">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Tunis</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem17">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sousse</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem18">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sfax</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">192</property>
-	      <property name="y">152</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="57radiobutton">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">5/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">67radiobutton</property>
-	    </widget>
-	    <packing>
-	      <property name="x">184</property>
-	      <property name="y">248</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkCheckButton" id="crcheckbutton">
 	      <property name="width_request">152</property>
 	      <property name="height_request">24</property>
@@ -853,6 +729,88 @@
 	      <property name="y">456</property>
 	    </packing>
 	  </child>
+
+	  <child>
+	    <widget class="GtkComboBox" id="regioncombobox">
+	      <property name="width_request">33</property>
+	      <property name="height_request">31</property>
+	      <property name="visible">True</property>
+	      <property name="items" translatable="yes">tunis 
+sousse 
+sfax</property>
+	      <property name="add_tearoffs">False</property>
+	      <property name="focus_on_click">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">208</property>
+	      <property name="y">160</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="67radiobutton">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">6/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <signal name="toggled" handler="on_67radiobutton_toggled" last_modification_time="Thu, 23 Nov 2023 14:55:33 GMT"/>
+	    </widget>
+	    <packing>
+	      <property name="x">312</property>
+	      <property name="y">248</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="77radiobutton">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">7/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">67radiobutton</property>
+	      <signal name="toggled" handler="on_77radiobutton_toggled" last_modification_time="Thu, 23 Nov 2023 14:55:44 GMT"/>
+	    </widget>
+	    <packing>
+	      <property name="x">448</property>
+	      <property name="y">248</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="57radiobutton">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">5/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">67radiobutton</property>
+	      <signal name="toggled" handler="on_57radiobutton_toggled" last_modification_time="Thu, 23 Nov 2023 14:55:14 GMT"/>
+	    </widget>
+	    <packing>
+	      <property name="x">184</property>
+	      <property name="y">248</property>
+	    </packing>
+	  </child>
 	</widget>
 	<packing>
 	  <property name="tab_expand">False</property>
@@ -888,7 +846,7 @@
 	  <property name="visible">True</property>
 
 	  <child>
-	    <widget class="GtkTreeView" id="treeview1">
+	    <widget class="GtkTreeView" id="gereretabtreeview">
 	      <property name="width_request">544</property>
 	      <property name="height_request">384</property>
 	      <property name="visible">True</property>
@@ -900,6 +858,7 @@
 	      <property name="fixed_height_mode">False</property>
 	      <property name="hover_selection">False</property>
 	      <property name="hover_expand">False</property>
+	      <signal name="row_activated" handler="on_gereretabtreeview_row_activated" last_modification_time="Thu, 23 Nov 2023 15:37:02 GMT"/>
 	    </widget>
 	    <packing>
 	      <property name="x">24</property>
@@ -1388,47 +1347,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkRadioButton" id="radiobuttonm67">
-	      <property name="width_request">64</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">6/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	    </widget>
-	    <packing>
-	      <property name="x">896</property>
-	      <property name="y">232</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="radiobuttonm77">
-	      <property name="width_request">124</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">7/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">radiobuttonm67</property>
-	    </widget>
-	    <packing>
-	      <property name="x">952</property>
-	      <property name="y">232</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkCheckButton" id="checkbuttommsf">
 	      <property name="width_request">64</property>
 	      <property name="height_request">24</property>
@@ -1601,130 +1519,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkCombo" id="combomregion">
-	      <property name="width_request">187</property>
-	      <property name="height_request">27</property>
-	      <property name="visible">True</property>
-	      <property name="value_in_list">False</property>
-	      <property name="allow_empty">True</property>
-	      <property name="case_sensitive">False</property>
-	      <property name="enable_arrow_keys">True</property>
-	      <property name="enable_arrows_always">True</property>
-
-	      <child internal-child="entry">
-		<widget class="GtkEntry" id="combo-entry8">
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="editable">True</property>
-		  <property name="visibility">True</property>
-		  <property name="max_length">0</property>
-		  <property name="text" translatable="yes"></property>
-		  <property name="has_frame">True</property>
-		  <property name="invisible_char">•</property>
-		  <property name="activates_default">False</property>
-		</widget>
-	      </child>
-
-	      <child internal-child="list">
-		<widget class="GtkList" id="combo-list9">
-		  <property name="visible">True</property>
-		  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem32">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Tunis</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem33">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sousse</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem34">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sfax</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">840</property>
-	      <property name="y">120</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkCombo" id="rechregioncombo">
-	      <property name="width_request">187</property>
-	      <property name="height_request">27</property>
-	      <property name="visible">True</property>
-	      <property name="value_in_list">False</property>
-	      <property name="allow_empty">True</property>
-	      <property name="case_sensitive">False</property>
-	      <property name="enable_arrow_keys">True</property>
-	      <property name="enable_arrows_always">True</property>
-
-	      <child internal-child="entry">
-		<widget class="GtkEntry" id="combo-entry12">
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="editable">True</property>
-		  <property name="visibility">True</property>
-		  <property name="max_length">0</property>
-		  <property name="text" translatable="yes"></property>
-		  <property name="has_frame">True</property>
-		  <property name="invisible_char">•</property>
-		  <property name="activates_default">False</property>
-		</widget>
-	      </child>
-
-	      <child internal-child="list">
-		<widget class="GtkList" id="combo-list13">
-		  <property name="visible">True</property>
-		  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem51">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Tunis</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem52">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sousse</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem53">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sfax</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">104</property>
-	      <property name="y">568</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkCheckButton" id="checkbuttonnom_reg">
 	      <property name="width_request">126</property>
 	      <property name="height_request">24</property>
@@ -1765,89 +1559,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkCombo" id="mregcombo">
-	      <property name="width_request">187</property>
-	      <property name="height_request">27</property>
-	      <property name="visible">True</property>
-	      <property name="value_in_list">False</property>
-	      <property name="allow_empty">True</property>
-	      <property name="case_sensitive">False</property>
-	      <property name="enable_arrow_keys">True</property>
-	      <property name="enable_arrows_always">True</property>
-
-	      <child internal-child="entry">
-		<widget class="GtkEntry" id="entry33">
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="editable">True</property>
-		  <property name="visibility">True</property>
-		  <property name="max_length">0</property>
-		  <property name="text" translatable="yes"></property>
-		  <property name="has_frame">True</property>
-		  <property name="invisible_char">•</property>
-		  <property name="activates_default">False</property>
-		</widget>
-	      </child>
-
-	      <child internal-child="list">
-		<widget class="GtkList" id="list2">
-		  <property name="visible">True</property>
-		  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem35">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Tunis</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem36">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sousse</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem37">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sfax</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">840</property>
-	      <property name="y">120</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="radiobuttonm57">
-	      <property name="width_request">64</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">5/7</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">radiobuttonm67</property>
-	    </widget>
-	    <packing>
-	      <property name="x">840</property>
-	      <property name="y">232</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkCheckButton" id="checkbuttonmcr">
 	      <property name="width_request">144</property>
 	      <property name="height_request">24</property>
@@ -1864,6 +1575,104 @@
 	    <packing>
 	      <property name="x">840</property>
 	      <property name="y">368</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkComboBox" id="mregioncombobox">
+	      <property name="width_request">33</property>
+	      <property name="height_request">31</property>
+	      <property name="visible">True</property>
+	      <property name="items" translatable="yes">tunis
+sousse
+sfax</property>
+	      <property name="add_tearoffs">False</property>
+	      <property name="focus_on_click">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">840</property>
+	      <property name="y">128</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkComboBox" id="rechregioncombobox">
+	      <property name="width_request">33</property>
+	      <property name="height_request">31</property>
+	      <property name="visible">True</property>
+	      <property name="items" translatable="yes">tunis
+sousse
+sfax</property>
+	      <property name="add_tearoffs">False</property>
+	      <property name="focus_on_click">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">112</property>
+	      <property name="y">568</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobuttonm57">
+	      <property name="width_request">64</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">5/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">840</property>
+	      <property name="y">232</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobuttonm67">
+	      <property name="width_request">64</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">6/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">radiobuttonm57</property>
+	      <signal name="toggled" handler="on_radiobuttonm67_toggled" last_modification_time="Thu, 23 Nov 2023 15:39:15 GMT"/>
+	    </widget>
+	    <packing>
+	      <property name="x">896</property>
+	      <property name="y">232</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobuttonm77">
+	      <property name="width_request">124</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">7/7</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">radiobuttonm57</property>
+	      <signal name="toggled" handler="on_radiobuttonm77_toggled" last_modification_time="Thu, 23 Nov 2023 15:39:27 GMT"/>
+	    </widget>
+	    <packing>
+	      <property name="x">952</property>
+	      <property name="y">232</property>
 	    </packing>
 	  </child>
 	</widget>
@@ -1953,188 +1762,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkScrolledWindow" id="scrolledwindow2">
-	      <property name="width_request">328</property>
-	      <property name="height_request">144</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="hscrollbar_policy">GTK_POLICY_ALWAYS</property>
-	      <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
-	      <property name="shadow_type">GTK_SHADOW_NONE</property>
-	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
-
-	      <child>
-		<widget class="GtkCTree" id="ctree3">
-		  <property name="width_request">200</property>
-		  <property name="height_request">100</property>
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="n_columns">3</property>
-		  <property name="column_widths">80,80,80</property>
-		  <property name="selection_mode">GTK_SELECTION_SINGLE</property>
-		  <property name="show_titles">True</property>
-		  <property name="shadow_type">GTK_SHADOW_IN</property>
-
-		  <child>
-		    <widget class="GtkLabel" id="label75">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label75</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkLabel" id="label76">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label76</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkLabel" id="label77">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label77</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">496</property>
-	      <property name="y">320</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkScrolledWindow" id="scrolledwindow3">
-	      <property name="width_request">320</property>
-	      <property name="height_request">144</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="hscrollbar_policy">GTK_POLICY_ALWAYS</property>
-	      <property name="vscrollbar_policy">GTK_POLICY_ALWAYS</property>
-	      <property name="shadow_type">GTK_SHADOW_NONE</property>
-	      <property name="window_placement">GTK_CORNER_TOP_LEFT</property>
-
-	      <child>
-		<widget class="GtkCTree" id="ctree2">
-		  <property name="width_request">200</property>
-		  <property name="height_request">100</property>
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="n_columns">3</property>
-		  <property name="column_widths">80,80,80</property>
-		  <property name="selection_mode">GTK_SELECTION_SINGLE</property>
-		  <property name="show_titles">True</property>
-		  <property name="shadow_type">GTK_SHADOW_IN</property>
-
-		  <child>
-		    <widget class="GtkLabel" id="label70">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label70</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkLabel" id="label71">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label71</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkLabel" id="label72">
-		      <property name="visible">True</property>
-		      <property name="label" translatable="yes">label72</property>
-		      <property name="use_underline">False</property>
-		      <property name="use_markup">False</property>
-		      <property name="justify">GTK_JUSTIFY_LEFT</property>
-		      <property name="wrap">False</property>
-		      <property name="selectable">False</property>
-		      <property name="xalign">0.5</property>
-		      <property name="yalign">0.5</property>
-		      <property name="xpad">0</property>
-		      <property name="ypad">0</property>
-		      <property name="ellipsize">PANGO_ELLIPSIZE_NONE</property>
-		      <property name="width_chars">-1</property>
-		      <property name="single_line_mode">False</property>
-		      <property name="angle">0</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">712</property>
-	      <property name="y">120</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkLabel" id="label73">
 	      <property name="width_request">384</property>
 	      <property name="height_request">160</property>
@@ -2161,68 +1788,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkCombo" id="combostatreg">
-	      <property name="width_request">187</property>
-	      <property name="height_request">27</property>
-	      <property name="visible">True</property>
-	      <property name="value_in_list">False</property>
-	      <property name="allow_empty">True</property>
-	      <property name="case_sensitive">False</property>
-	      <property name="enable_arrow_keys">True</property>
-	      <property name="enable_arrows_always">True</property>
-
-	      <child internal-child="entry">
-		<widget class="GtkEntry" id="combo-entry2">
-		  <property name="visible">True</property>
-		  <property name="can_focus">True</property>
-		  <property name="editable">True</property>
-		  <property name="visibility">True</property>
-		  <property name="max_length">0</property>
-		  <property name="text" translatable="yes"></property>
-		  <property name="has_frame">True</property>
-		  <property name="invisible_char">•</property>
-		  <property name="activates_default">False</property>
-		</widget>
-	      </child>
-
-	      <child internal-child="list">
-		<widget class="GtkList" id="combo-list2">
-		  <property name="visible">True</property>
-		  <property name="selection_mode">GTK_SELECTION_BROWSE</property>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem67">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Tunis</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem68">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sousse</property>
-		    </widget>
-		  </child>
-
-		  <child>
-		    <widget class="GtkListItem" id="listitem69">
-		      <property name="visible">True</property>
-		      <property name="can_focus">True</property>
-		      <property name="label" translatable="yes">Sfax</property>
-		    </widget>
-		  </child>
-		</widget>
-	      </child>
-	    </widget>
-	    <packing>
-	      <property name="x">336</property>
-	      <property name="y">120</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkLabel" id="label69">
 	      <property name="width_request">49</property>
 	      <property name="height_request">17</property>
@@ -2245,6 +1810,63 @@
 	    <packing>
 	      <property name="x">600</property>
 	      <property name="y">128</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkComboBox" id="comboboxstatreg">
+	      <property name="width_request">33</property>
+	      <property name="height_request">31</property>
+	      <property name="visible">True</property>
+	      <property name="items" translatable="yes">tunis 
+sousse
+sfax</property>
+	      <property name="add_tearoffs">False</property>
+	      <property name="focus_on_click">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">352</property>
+	      <property name="y">128</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkTreeView" id="statregtreeview">
+	      <property name="width_request">300</property>
+	      <property name="height_request">200</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="headers_visible">True</property>
+	      <property name="rules_hint">False</property>
+	      <property name="reorderable">False</property>
+	      <property name="enable_search">True</property>
+	      <property name="fixed_height_mode">False</property>
+	      <property name="hover_selection">False</property>
+	      <property name="hover_expand">False</property>
+	    </widget>
+	    <packing>
+	      <property name="x">696</property>
+	      <property name="y">96</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkTreeView" id="treeviewstatcap">
+	      <property name="width_request">300</property>
+	      <property name="height_request">200</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="headers_visible">True</property>
+	      <property name="rules_hint">False</property>
+	      <property name="reorderable">False</property>
+	      <property name="enable_search">True</property>
+	      <property name="fixed_height_mode">False</property>
+	      <property name="hover_selection">False</property>
+	      <property name="hover_expand">False</property>
+	    </widget>
+	    <packing>
+	      <property name="x">488</property>
+	      <property name="y">360</property>
 	    </packing>
 	  </child>
 	</widget>
@@ -6026,27 +5648,6 @@
 	  </child>
 
 	  <child>
-	    <widget class="GtkRadioButton" id="radiobutton2">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">-</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">radiobutton1</property>
-	    </widget>
-	    <packing>
-	      <property name="x">288</property>
-	      <property name="y">184</property>
-	    </packing>
-	  </child>
-
-	  <child>
 	    <widget class="GtkLabel" id="label178">
 	      <property name="width_request">120</property>
 	      <property name="height_request">25</property>
@@ -6587,6 +6188,27 @@
 	      <property name="y">336</property>
 	    </packing>
 	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobutton2">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">-</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">radiobutton1</property>
+	    </widget>
+	    <packing>
+	      <property name="x">288</property>
+	      <property name="y">184</property>
+	    </packing>
+	  </child>
 	</widget>
 	<packing>
 	  <property name="tab_expand">False</property>
@@ -6722,47 +6344,6 @@
 	    <packing>
 	      <property name="x">408</property>
 	      <property name="y">120</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="radiobuttonm+">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">+</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	    </widget>
-	    <packing>
-	      <property name="x">480</property>
-	      <property name="y">112</property>
-	    </packing>
-	  </child>
-
-	  <child>
-	    <widget class="GtkRadioButton" id="radiobuttonm-">
-	      <property name="width_request">116</property>
-	      <property name="height_request">24</property>
-	      <property name="visible">True</property>
-	      <property name="can_focus">True</property>
-	      <property name="label" translatable="yes">-</property>
-	      <property name="use_underline">True</property>
-	      <property name="relief">GTK_RELIEF_NORMAL</property>
-	      <property name="focus_on_click">True</property>
-	      <property name="active">False</property>
-	      <property name="inconsistent">False</property>
-	      <property name="draw_indicator">True</property>
-	      <property name="group">radiobuttonm+</property>
-	    </widget>
-	    <packing>
-	      <property name="x">568</property>
-	      <property name="y">112</property>
 	    </packing>
 	  </child>
 
@@ -7353,6 +6934,47 @@
 	    <packing>
 	      <property name="x">248</property>
 	      <property name="y">512</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobuttonm-">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">-</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	    </widget>
+	    <packing>
+	      <property name="x">568</property>
+	      <property name="y">112</property>
+	    </packing>
+	  </child>
+
+	  <child>
+	    <widget class="GtkRadioButton" id="radiobuttonm+">
+	      <property name="width_request">116</property>
+	      <property name="height_request">24</property>
+	      <property name="visible">True</property>
+	      <property name="can_focus">True</property>
+	      <property name="label" translatable="yes">+</property>
+	      <property name="use_underline">True</property>
+	      <property name="relief">GTK_RELIEF_NORMAL</property>
+	      <property name="focus_on_click">True</property>
+	      <property name="active">False</property>
+	      <property name="inconsistent">False</property>
+	      <property name="draw_indicator">True</property>
+	      <property name="group">radiobuttonm-</property>
+	    </widget>
+	    <packing>
+	      <property name="x">480</property>
+	      <property name="y">112</property>
 	    </packing>
 	  </child>
 	</widget>

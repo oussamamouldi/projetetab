@@ -38,18 +38,18 @@ main (int argc, char *argv[])
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  authentification = create_authentification ();
-  gtk_widget_show (authentification);
+  /*authentification = create_authentification ();
+  gtk_widget_show (authentification);*/
   Gestion_des_etablissement = create_Gestion_des_etablissement ();
   gtk_widget_show (Gestion_des_etablissement);
-  Gestion_fichedonneur = create_Gestion_fichedonneur ();
+ /* Gestion_fichedonneur = create_Gestion_fichedonneur ();
   gtk_widget_show (Gestion_fichedonneur);
   Gestion_utilisateur = create_Gestion_utilisateur ();
   gtk_widget_show (Gestion_utilisateur);
   paneauAdmin = create_paneauAdmin ();
   gtk_widget_show (paneauAdmin);
   Gestion_des_dons = create_Gestion_des_dons ();
-  gtk_widget_show (Gestion_des_dons);
+  gtk_widget_show (Gestion_des_dons);*/
 
   gtk_main ();
   return 0;

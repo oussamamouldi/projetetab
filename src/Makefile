@@ -100,7 +100,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_ets_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) interface.$(OBJEXT) \
-	callbacks.$(OBJEXT)
+	callbacks.$(OBJEXT) fonctions.$(OBJEXT)
 ets_OBJECTS = $(am_ets_OBJECTS)
 am__DEPENDENCIES_1 =
 ets_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -160,12 +160,12 @@ ETAGS = etags
 CTAGS = ctags
 am__DIST_COMMON = $(srcdir)/Makefile.in $(top_srcdir)/depcomp
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/oussamamouldi/Desktop/copy/missing aclocal-1.15
+ACLOCAL = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/missing aclocal-1.15
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/oussamamouldi/Desktop/copy/missing autoconf
-AUTOHEADER = ${SHELL} /home/oussamamouldi/Desktop/copy/missing autoheader
-AUTOMAKE = ${SHELL} /home/oussamamouldi/Desktop/copy/missing automake-1.15
+AUTOCONF = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/missing autoconf
+AUTOHEADER = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/missing autoheader
+AUTOMAKE = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/missing automake-1.15
 AWK = mawk
 CATALOGS = 
 CATOBJEXT = .gmo
@@ -200,7 +200,7 @@ LIBOBJS =
 LIBS = 
 LTLIBOBJS = 
 MAINT = 
-MAKEINFO = ${SHELL} /home/oussamamouldi/Desktop/copy/missing makeinfo
+MAKEINFO = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 MKINSTALLDIRS = ./mkinstalldirs
 MSGFMT = /usr/bin/msgfmt
@@ -229,10 +229,10 @@ STRIP =
 USE_NLS = yes
 VERSION = 0.1
 XGETTEXT = /usr/bin/xgettext
-abs_builddir = /home/oussamamouldi/Desktop/copy/src
-abs_srcdir = /home/oussamamouldi/Desktop/copy/src
-abs_top_builddir = /home/oussamamouldi/Desktop/copy
-abs_top_srcdir = /home/oussamamouldi/Desktop/copy
+abs_builddir = /home/oussamamouldi/Desktop/projet_ets/src
+abs_srcdir = /home/oussamamouldi/Desktop/projet_ets/src
+abs_top_builddir = /home/oussamamouldi/Desktop/projet_ets
+abs_top_srcdir = /home/oussamamouldi/Desktop/projet_ets
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -251,7 +251,7 @@ host_alias =
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/oussamamouldi/Desktop/copy/install-sh
+install_sh = ${SHELL} /home/oussamamouldi/Desktop/projet_ets/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -281,7 +281,8 @@ ets_SOURCES = \
 	main.c \
 	support.c support.h \
 	interface.c interface.h \
-	callbacks.c callbacks.h
+	callbacks.c callbacks.h \
+	fonctions.c fonctions.h
 
 ets_LDADD = -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype $(INTLLIBS)
 all: all-am
@@ -371,6 +372,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 include ./$(DEPDIR)/callbacks.Po
+include ./$(DEPDIR)/fonctions.Po
 include ./$(DEPDIR)/interface.Po
 include ./$(DEPDIR)/main.Po
 include ./$(DEPDIR)/support.Po

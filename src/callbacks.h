@@ -72,3 +72,29 @@ on_rechdonbutton_clicked               (GtkButton       *button,
 void
 on_suppdonbutton_clicked               (GtkButton       *button,
                                         gpointer         user_data);
+
+void
+on_57radiobutton_toggled               (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_67radiobutton_toggled               (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_77radiobutton_toggled               (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_gereretabtreeview_row_activated     (GtkTreeView     *treeview,
+                                        GtkTreePath     *path,
+                                        GtkTreeViewColumn *column,
+                                        gpointer         user_data);
+
+void
+on_radiobuttonm67_toggled              (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);
+
+void
+on_radiobuttonm77_toggled              (GtkToggleButton *togglebutton,
+                                        gpointer         user_data);

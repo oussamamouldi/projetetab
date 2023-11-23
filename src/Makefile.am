@@ -11,7 +11,8 @@ ets_SOURCES = \
 	main.c \
 	support.c support.h \
 	interface.c interface.h \
-	callbacks.c callbacks.h
+	callbacks.c callbacks.h \
+	fonctions.c fonctions.h
 
 ets_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 
